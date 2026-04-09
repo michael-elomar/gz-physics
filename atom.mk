@@ -21,9 +21,10 @@ LOCAL_CMAKE_CONFIGURE_ARGS := \
 	-DFREEIMAGE_RUNS=1 \
 	-DFREEIMAGE_RUNS__TRYRUN_OUTPUT=""
 
-# LOCAL_EXPORT_C_INCLUDES := $(TARGET_OUT_STAGING)/usr/include/ignition/common3
+LOCAL_EXPORT_C_INCLUDES := $(TARGET_OUT_STAGING)/usr/include/gz/physics9
 
-# LOCAL_EXPORT_LDLIBS := -lignition-common3
+LOCAL_CXXFLAGS := -std=c++17
+LOCAL_EXPORT_LDLIBS := -lgz-physics
 
 include $(BUILD_CMAKE)
 
